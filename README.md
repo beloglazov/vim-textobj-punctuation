@@ -3,9 +3,9 @@
 `vim-textobj-punctuation` is a Vim plugin providing text objects `iu` and `au`
 (`u` stands for pUnctuation, as `p` is already taken for paragraphs) for
 capturing the text between the current cursor position and a punctuation
-character in front.  This punctuation character can be one of: `,`, `.`, `:`,
+character in front. This punctuation character can be one of: `,`, `.`, `:`,
 `;`, `!`, and `?`. The text object can span multiple lines to reach the closest
-punctuation character.  Some examples (the cursor is shown with `|`):
+punctuation character. Some examples (the cursor is shown with `|`):
 
 - Before: `String |foo = "bar";`; after pressing `diu`: `String |;`
 - Before: `if |i == 42:`; after pressing `diu`: `if |:`
