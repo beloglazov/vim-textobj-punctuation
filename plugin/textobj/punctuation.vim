@@ -18,11 +18,10 @@ call textobj#user#plugin('punctuation', {
 
 function! s:select(object_type)
     let start_pos = getpos('.')
-    call search('\v[^,:;!\.\?]*', 'We')
+    call search('\v[,:;!\.\?]', 'W')
     let end_pos = getpos('.')
 
     if a:object_type ==? 'i'
-        let start_pos[2] += 1
         if end_pos[2] == 1
             let end_pos[1] -= 1
             let end_pos[2] = strlen(getline(end_pos[1])) + 1
