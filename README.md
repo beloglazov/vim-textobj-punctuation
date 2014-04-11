@@ -17,7 +17,7 @@ punctuation character. Some examples (the cursor is shown with `|`):
 
 This plugin requires
 [vim-textobj-user](https://github.com/kana/vim-textobj-user) to be installed. If
-you are using Vundle, just add the following lines to your .vimrc:
+you are using Vundle, just add the following lines to your `.vimrc`:
 
 ```
 Bundle 'kana/vim-textobj-user'
