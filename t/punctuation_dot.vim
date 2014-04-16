@@ -14,7 +14,7 @@ describe 'iu'
     it 'within the current line'
         put! = '.'
         normal diu
-        Expect getline(1) == ''
+        Expect getline(1) == '.'
     end
 
     it 'within the current line'
@@ -42,12 +42,20 @@ describe 'iu'
         Expect getline(1) == 'test. .'
     end
 
-    it 'multiline'
-        put = '.'
-        normal! k
+    it 'within the current line'
+        put! = 'test. qwe.'
+        normal diu
         normal diu
         Expect getline(1) == '.'
-        Expect getline(2) == ''
+    end
+
+    it 'within the current line'
+        put! = 'test, qwe, asd.'
+        normal! fq
+        normal diu
+        normal diu
+        normal diu
+        Expect getline(1) == 'test, .'
     end
 
     it 'multiline'
@@ -93,7 +101,7 @@ describe 'au'
     it 'within the current line'
         put! = '.'
         normal dau
-        Expect getline(1) == ''
+        Expect getline(1) == '.'
     end
 
     it 'within the current line'
@@ -121,12 +129,20 @@ describe 'au'
         Expect getline(1) == 'test. '
     end
 
-    it 'multiline'
-        put = '.'
-        normal! k
+    it 'within the current line'
+        put! = 'test. qwe.'
+        normal dau
         normal dau
         Expect getline(1) == ''
-        Expect getline(2) == ''
+    end
+
+    it 'within the current line'
+        put! = 'test, qwe, asd.'
+        normal! fq
+        normal dau
+        normal dau
+        normal dau
+        Expect getline(1) == 'test, '
     end
 
     it 'multiline'

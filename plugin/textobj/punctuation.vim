@@ -30,6 +30,11 @@ function! s:select(object_type)
         endif
     endif
 
+    if start_pos[1] > end_pos[1] ||
+            \ start_pos[1] == end_pos[1] && start_pos[2] >= end_pos[2]
+        return 0
+    endif
+
     return ['v', start_pos, end_pos]
 endfunction
 
