@@ -18,7 +18,7 @@ call textobj#user#plugin('punctuation', {
 
 function! s:select(object_type)
     let start_pos = getpos('.')
-    call search('\v[,:;!\.\?]', 'W')
+    call search('\v[,:;!.?]', 'W')
     let end_pos = getpos('.')
 
     if a:object_type ==? 'i'

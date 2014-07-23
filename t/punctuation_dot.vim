@@ -58,6 +58,12 @@ describe 'iu'
         Expect getline(1) == 'test, .'
     end
 
+    it 'within the current line with \'
+        put! = 'test \ test.'
+        normal diu
+        Expect getline(1) == '.'
+    end
+
     it 'multiline'
         put! = '.'
         put! = 'test'
@@ -143,6 +149,12 @@ describe 'au'
         normal dau
         normal dau
         Expect getline(1) == 'test, '
+    end
+
+    it 'within the current line with \'
+        put! = 'test \ test.'
+        normal dau
+        Expect getline(1) == ''
     end
 
     it 'multiline'
